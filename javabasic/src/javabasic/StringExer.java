@@ -10,9 +10,11 @@ public class StringExer {
 		// 리터널
 		String str1 = "안녕하세요";
 		
+		
 		// constructor 생성자 방식
-		char[]charArry = {'안','녕','하','세','요'};
-		String str2 = new String(charArry);
+		char[]charArray = {'안','녕','하','세','요'};
+		
+		String str2 = new String(charArray);
 		
 		System.out.println(str1);
 		System.out.println(str2);
@@ -32,9 +34,18 @@ public class StringExer {
 			System.out.println(str3.charAt(i));
 		}
 		
+		// 한번만 사용되는 변수는 생성하지 않는 것이 좋은 코드
+		String str4 = "Hi There";
+		System.out.println(str4);
+		
+		// 위의 코드를 한번만 사용할시 변수를 만들지 않는다\
+		System.out.println("Hi There");
 		
 		
-		
+		// for : 구문을 사용해서 배열의 요소 (element)들을 출력
+		for(char ch : charArray) {
+			System.out.println(ch);
+		}
 		
 		
 		
