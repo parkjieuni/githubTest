@@ -4,6 +4,8 @@ import java.util.Iterator;
 
 public class StringExer {
 
+	private static Object startIdx;
+
 	public static void main(String[] args) {
 		// 3일차
 		
@@ -50,7 +52,7 @@ public class StringExer {
 		
 		// 변수의 생성단계
 		// 선언 Declaration : 변수의 타입을 지정(메모리 크기 지정)
-		int i;
+		int i = 0;
 		// i 는 main 메소드 내에서 선언 도니 지역 변수 입ㅁ으로 main 밖에서는 사용할 수 없다
 		// i 는 main 메소드의 지역변수이므로 초기화 후에만 사용할 수 있다.
 		//System.out.println("선언 후 ": i);
@@ -108,11 +110,77 @@ public class StringExer {
 		System.out.println(str10.indexOf("산"));//7
 		System.out.println(str10.indexOf("마르고"));
 		System.out.println(str10.isEmpty());//false
-		System.out.println();
-		System.out.println();
-		System.out.println();
-		System.out.println();
-		System.out.println();
+		System.out.println(str10.lastIndexOf("도")); //15
+		System.out.println(str10.length());//17
+		System.out.println(str10.replace("백두산", "한라산"));
+		System.out.println(str10.replace("","-"));
+		//System.out.println(str10.repeatAll(i));
+		//String[]strSplit = str10.split("")
+				//for(String str : strSplit) {
+				//System.out.println(str);	
+				//}
+		//String str11 = " 	헬로우 	";
+		
+		
+		// 실습 1) 
+		
+		String exerStr = "Time is a kind friend, he will make us old 010/1234/4567";
+		//실습 1
+		//exerStr 문자열의 양쪽 공배을 제거해서 출력
+		
+		System.out.println(exerStr.trim());
+		
+		
+		//2) 
+		// Time을 Gold로 변경하여 출력
+		System.out.println(exerStr.replace("Time", "Gold"));
+		//3)
+		// 전화번호를 010-1234-4567로 변경해서 출력
+		// 전화번호 변경.
+		System.out.println(exerStr.replace("/", "-"));
+		
+		// 전화번호 추출
+		//다시 해보기 
+		//System.out.println(exerStr.substring(indexOf("0")).indexOf("0"))+13.replace("/", "-"));
+	
+		
+		
+		System.out.println(); 
+		//4)
+		// String exerStr 문자열을 공백 기준으로 분리하여 Strinf[] 로 변환하여 출력
+		String[]spiltedExerStr = exerStr.split(" ");
+		for(String str : spiltedExerStr) {
+			System.out.println(str);
+		}
+		//5)
+		// String exerStr 문자열 공백 기준 분리하여 문자수가 3이상인 것들만 출력
+		String[]spiltedExerStr2 = exerStr.split(" ");
+		for(String str : spiltedExerStr2) {
+			if(str.length()>=3) {
+				System.out.println(str);
+				
+			}
+		}
+			
+		
+		//6)
+		// i의 문자열의 인덱스들을 출력
+		
+		System.out.println(exerStr.indexOf("i"));	
+		
+		int startIdx = 0;
+		
+		int len = exerStr.length();
+		for(int j = 0; j<len; j++) {
+			startIdx = exerStr.indexOf("i");
+			System.out.println(startIdx);
+		}
+			
+
+		//7
+		// 전ㄴ체 문자열을 소문자로 한번 대문자로 한번 변경하여 출력
+			
+		    
 		System.out.println();
 		System.out.println();
 		System.out.println();
