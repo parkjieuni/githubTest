@@ -4,7 +4,7 @@ public class Practic_003 {
 
 	public static void main(String[] args) {
 		
-		
+		// 별찍기
         for(int i = 0; i < 5; i++){
             for(int j = i; j < 5; j++){
                 System.out.print(" ");
